@@ -1,0 +1,359 @@
+/*Font*/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+/* Variables de colores y fuente */
+:root {
+  --primary: #F48838;
+  --second: #2A344A;
+  --third: #3C4043;
+  --white: #f5f5f5;
+  --button: #895C56;
+  --bold: 700;
+  --regular: 400;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: PT+Sans, sans-serif;
+}
+
+/**/
+
+nav{
+    background: var(--white);
+    font-weight: var(--bold);
+    height: 100px;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 60px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: var(--second);
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.menu_login ul li a {
+    font-size:.8rem;
+    color: var(--primary);
+    
+}
+
+.menu_login ul li a:hover {
+    background: var(--second);
+    transition: .5s;
+}
+
+/* li a.active, li a:hover{
+    background: var(--primary);
+    transition: .5s;
+} */
+
+li a:hover{
+    background: var(--primary);
+    transition: .5s;
+} 
+
+.checkbtn{
+    font-size: 30px;
+    color: var(--second);
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/*CONTACTO FORMULARIO*/
+
+.form_inputs {
+    width: 50%;
+    border-radius: 5px;
+    
+    padding: 20px;
+    font-size: var(--medium);
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    background-color: var(--white);
+    
+  }
+  
+  input[type=submit] {
+    background-color: var(--button);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #553935;
+  }
+
+
+
+/* FIN CONTACTO FORMULARIO */	
+
+
+
+
+/* MEDIAS QUERIES */
+/*@media (max-width: 952px){
+    nav ul li a{
+        font-size: 80px;
+    }
+}*/
+
+@media (max-width: 858px) {
+    
+    .checkbtn{
+        display: flex;
+    }
+
+    nav{
+        padding: 0 30px;
+    }
+
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+
+    nav ul li{
+        margin: 20px 0;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+    
+    /* li a:hover, li a.active{
+        background: #000090;
+        color: red;
+    }
+    */
+
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    /*Hero*/
+
+    #hero {
+        background-color: var(--second);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    .container__hero {
+        margin: 50px 20px;
+    }
+    
+    .container__hero h4{
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        font-weight: var(--bold);
+        
+    }
+
+    .container__hero h2{
+        font-size: 2.7rem;
+        margin-bottom: 1.5rem;
+        font-weight: var(--bold);
+    }
+
+    .container__hero p{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        
+        line-height: 2rem;  
+    }
+
+    .container__hero a{
+        align-items: center;
+        font-size: 1.5rem;
+        background-color: var(--button);
+        color: var(--white);
+        padding: 12px 20px;
+        height: 18px;
+        width: 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; 
+        margin: 0 auto;
+    }
+
+    .container__hero i {
+        
+        font-size: 1.7rem;
+        margin-right: 1rem;
+    }
+
+    /*Nosotros*/
+
+    #nosotros {
+        background-color: var(--white);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .container__nosotros {
+        margin: 50px 20px;
+    }
+
+    .container__nosotros h4{
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        font-weight: var(--bold);
+        
+    }
+
+    .container__nosotros h2{
+        font-size: 2.7rem;
+        margin-bottom: 1.5rem;
+        font-weight: var(--bold);
+    }
+
+    .container__nosotros p{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: justify; 
+        line-height: 2rem;  
+    }
+
+    .container__nosotros img{
+        width: 300px;
+        margin-bottom: 1.5rem;
+         
+    }
+
+    /*pRODUCTOS*/
+
+    #productos {
+        background-color: var(--second);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .container__productos {
+        margin: 50px 20px;
+    }
+
+    .container__productos h4{
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        font-weight: var(--bold);
+        
+    }
+
+    .container__productos h2{
+        font-size: 2.7rem;
+        margin-bottom: 1.5rem;
+        font-weight: var(--bold);
+    }
+
+    .container__productos p{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: justify; 
+        line-height: 2rem;  
+    }
+
+    .container__productos img{
+        width: 300px;
+        margin-bottom: 1.5rem;
+         
+    }
+
+    /*CONTACTO*/
+
+    #contacto {
+        background-color: var(--white);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .container__contacto {
+        margin: 50px 20px;
+    }
+
+    .container__contacto h4{
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        font-weight: var(--bold);
+        
+    }
+
+    .container__contacto h2{
+        font-size: 2.7rem;
+        margin-bottom: 1.5rem;
+        font-weight: var(--bold);
+    }
+
+    .container__contacto p{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: justify; 
+        line-height: 2rem;  
+    }
+
+    .container__contacto img{
+        width: 300px;
+        margin-bottom: 1.5rem;
+         
+    }
+    /*FOOTER*/
+
+    
+}
